@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Maps/Map.gd" type="Script" id=1]
+[ext_resource path="res://Tiles/TileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://Towers/Range/StartTower/StartTower.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Towers/Receiver/FinishTower/FinishTower.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=5]
+
+[node name="Tutorial1" type="Node2D"]
+
+script = ExtResource( 1 )
+nextlevel = "res://Maps/Tutorial2.tscn"
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+z_index = -10
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 3, 3, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 2, 0, 7, 2, 0, 8, 2, 0, 9, 2, 0, 10, 2, 0, 11, 2, 0, 12, 2, 0, 13, 2, 0, 14, 2, 0, 15, 2, 0, 16, 2, 0, 17, 2, 0, 18, 2, 0, 19, 3, 3, 65536, 3, 65539, 65537, 3, 1, 65538, 3, 1, 65539, 3, 1, 65540, 3, 1, 65541, 3, 1, 65542, 3, 1, 65543, 3, 1, 65544, 3, 1, 65545, 3, 1, 65546, 3, 1, 65547, 3, 1, 65548, 3, 1, 65549, 3, 1, 65550, 3, 1, 65551, 3, 1, 65552, 3, 1, 65553, 3, 1, 65554, 3, 1, 65555, 3, 65541, 131072, 3, 65536, 131073, 2, 0, 131074, 2, 0, 131075, 2, 0, 131076, 2, 0, 131077, 2, 0, 131078, 2, 0, 131079, 2, 0, 131080, 2, 0, 131081, 2, 0, 131082, 2, 0, 131083, 2, 0, 131084, 2, 0, 131085, 2, 0, 131086, 2, 0, 131087, 2, 0, 131088, 2, 0, 131089, 2, 0, 131090, 2, 0, 131091, 3, 65536, 196608, 3, 65539, 196609, 3, 1, 196610, 3, 1, 196611, 3, 1, 196612, 3, 1, 196613, 3, 1, 196614, 3, 1, 196615, 3, 1, 196616, 3, 1, 196617, 3, 1, 196618, 3, 1, 196619, 3, 1, 196620, 3, 1, 196621, 3, 1, 196622, 3, 1, 196623, 3, 1, 196624, 3, 1, 196625, 3, 1, 196626, 3, 1, 196627, 3, 65541, 262144, 3, 65536, 262145, 2, 0, 262146, 2, 0, 262147, 2, 0, 262148, 2, 0, 262149, 2, 0, 262150, 2, 0, 262151, 2, 0, 262152, 2, 0, 262153, 2, 0, 262154, 2, 0, 262155, 2, 0, 262156, 2, 0, 262157, 2, 0, 262158, 2, 0, 262159, 2, 0, 262160, 2, 0, 262161, 2, 0, 262162, 2, 0, 262163, 3, 65536, 327680, 3, 65536, 327681, 2, 0, 327682, 4, 0, 327683, 4, 1, 327684, 4, 1, 327685, 4, 1, 327686, 4, 1, 327687, 4, 1, 327688, 4, 1, 327689, 4, 1, 327690, 4, 1, 327691, 4, 1, 327692, 4, 1, 327693, 4, 1, 327694, 4, 1, 327695, 4, 1, 327696, 4, 1, 327697, 4, 2, 327698, 2, 0, 327699, 3, 65536, 393216, 3, 65536, 393217, 2, 0, 393218, 4, 131072, 393219, 4, 65537, 393220, 4, 131073, 393221, 4, 5, 393222, 4, 65537, 393223, 4, 65537, 393224, 4, 65537, 393225, 4, 65537, 393226, 4, 65537, 393227, 4, 65537, 393228, 4, 65537, 393229, 4, 65537, 393230, 4, 4, 393231, 4, 131073, 393232, 4, 65537, 393233, 4, 131074, 393234, 2, 0, 393235, 3, 65536, 458752, 3, 65536, 458753, 2, 0, 458754, 0, 0, 458755, 4, 65539, 458756, 0, 0, 458757, 4, 65536, 458758, 4, 65537, 458759, 4, 65537, 458760, 4, 65537, 458761, 4, 65537, 458762, 4, 65537, 458763, 4, 65537, 458764, 4, 65537, 458765, 4, 65537, 458766, 4, 65538, 458767, 0, 0, 458768, 4, 65539, 458769, 0, 0, 458770, 2, 0, 458771, 3, 65536, 524288, 3, 65536, 524289, 2, 0, 524290, 4, 0, 524291, 4, 65537, 524292, 4, 1, 524293, 4, 65541, 524294, 4, 65537, 524295, 4, 65537, 524296, 4, 65537, 524297, 4, 65537, 524298, 4, 65537, 524299, 4, 65537, 524300, 4, 65537, 524301, 4, 65537, 524302, 4, 65540, 524303, 4, 1, 524304, 4, 65537, 524305, 4, 2, 524306, 2, 0, 524307, 3, 65536, 589824, 3, 65536, 589825, 2, 0, 589826, 4, 131072, 589827, 4, 131073, 589828, 4, 131073, 589829, 4, 131073, 589830, 4, 131073, 589831, 4, 131073, 589832, 4, 131073, 589833, 4, 131073, 589834, 4, 131073, 589835, 4, 131073, 589836, 4, 131073, 589837, 4, 131073, 589838, 4, 131073, 589839, 4, 131073, 589840, 4, 131073, 589841, 4, 131074, 589842, 2, 0, 589843, 3, 65536, 655360, 3, 65536, 655361, 2, 0, 655362, 2, 0, 655363, 2, 0, 655364, 2, 0, 655365, 2, 0, 655366, 2, 0, 655367, 2, 0, 655368, 2, 0, 655369, 2, 0, 655370, 2, 0, 655371, 2, 0, 655372, 2, 0, 655373, 2, 0, 655374, 2, 0, 655375, 2, 0, 655376, 2, 0, 655377, 2, 0, 655378, 2, 0, 655379, 3, 65536, 720896, 3, 65539, 720897, 3, 1, 720898, 3, 1, 720899, 3, 1, 720900, 3, 1, 720901, 3, 1, 720902, 3, 1, 720903, 3, 1, 720904, 3, 1, 720905, 3, 1, 720906, 3, 1, 720907, 3, 1, 720908, 3, 1, 720909, 3, 1, 720910, 3, 1, 720911, 3, 1, 720912, 3, 1, 720913, 3, 1, 720914, 3, 1, 720915, 3, 65541, 786432, 3, 65536, 786433, 2, 0, 786434, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786438, 2, 0, 786439, 2, 0, 786440, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 786449, 2, 0, 786450, 2, 0, 786451, 3, 65536, 851968, 3, 65539, 851969, 3, 1, 851970, 3, 1, 851971, 3, 1, 851972, 3, 1, 851973, 3, 1, 851974, 3, 1, 851975, 3, 1, 851976, 3, 1, 851977, 3, 1, 851978, 3, 1, 851979, 3, 1, 851980, 3, 1, 851981, 3, 1, 851982, 3, 1, 851983, 3, 1, 851984, 3, 1, 851985, 3, 1, 851986, 3, 1, 851987, 3, 65541, 917504, 3, 131077, 917505, 2, 0, 917506, 2, 0, 917507, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 917512, 2, 0, 917513, 2, 0, 917514, 2, 0, 917515, 2, 0, 917516, 2, 0, 917517, 2, 0, 917518, 2, 0, 917519, 2, 0, 917520, 2, 0, 917521, 2, 0, 917522, 2, 0, 917523, 3, 131077 )
+_sections_unfolded = [ "Cell", "Z Index" ]
+
+[node name="StartTower" parent="TileMap" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 80, 240 )
+
+[node name="FinishTower" parent="TileMap" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 560, 240 )
+
+[node name="UI" parent="." index="1" instance=ExtResource( 5 )]
+
+[node name="Label" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 80.0
+margin_top = 272.0
+margin_right = 234.0
+margin_bottom = 286.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Place LaserEmitter Here"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label2" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 368.0
+margin_top = 272.0
+margin_right = 559.0
+margin_bottom = 286.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "And place LaserReceiver Here"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="progress" from="." to="UI" method="_on_progress"]
+
+[connection signal="victory" from="." to="UI" method="_on_victory"]
+
+[connection signal="victory" from="." to="TileMap/StartTower" method="_on_victory"]
+
+[connection signal="start_download" from="TileMap/FinishTower" to="." method="_on_FinishTower_start_download"]
+
+[connection signal="stop_download" from="TileMap/FinishTower" to="." method="_on_FinishTower_stop_download"]
+
+[connection signal="nextlevel" from="UI" to="." method="_on_UI_nextlevel"]
+
+[connection signal="quit" from="UI" to="." method="_on_UI_quit"]
+
+[connection signal="tower_selected" from="UI" to="." method="_on_UI_tower_selected"]
+
+

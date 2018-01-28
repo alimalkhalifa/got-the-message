@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Electric_Hum.ogg-d07f4868e93c162a7cebfdcf73f428ba.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Electric_Hum.ogg"
+source_md5="1054d14b0f8bc3ec5719d4d8d0e5f65a"
+
+dest_files=[ "res://.import/Electric_Hum.ogg-d07f4868e93c162a7cebfdcf73f428ba.oggstr" ]
+dest_md5="85bbba77fafa5cefb8179c39fd09d755"
+
+[params]
+
+loop=true
+loop_offset=0

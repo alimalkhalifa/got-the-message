@@ -1,0 +1,263 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Tiles/Concrete/Concrete.png" type="Texture" id=1]
+[ext_resource path="res://Tiles/House/House.png" type="Texture" id=2]
+[ext_resource path="res://Resources/TileCollisionShape.tres" type="Shape2D" id=3]
+[ext_resource path="res://Tiles/Building/Building.png" type="Texture" id=4]
+[ext_resource path="res://Tiles/Roads/Roads.png" type="Texture" id=5]
+[ext_resource path="res://Tiles/Grass/Grass.png" type="Texture" id=6]
+
+[node name="TileSet" type="Node2D" index="0"]
+
+[node name="Concrete" type="Sprite" parent="." index="0"]
+
+position = Vector2( 32, 32 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="House" type="Sprite" parent="." index="1"]
+
+position = Vector2( 64, 32 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="House" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House/StaticBody2D" index="0"]
+
+shape = ExtResource( 3 )
+
+[node name="House2" type="Sprite" parent="." index="2"]
+
+position = Vector2( 96, 32 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -2 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 32, 32 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="House2" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House2/StaticBody2D" index="0"]
+
+shape = ExtResource( 3 )
+
+[node name="House3" type="Sprite" parent="." index="3"]
+
+position = Vector2( 128, 32 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -2 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 32, 32 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="House3" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House3/StaticBody2D" index="0"]
+
+shape = ExtResource( 3 )
+
+[node name="House4" type="Sprite" parent="." index="4"]
+
+position = Vector2( 160, 32 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -2 )
+region_enabled = true
+region_rect = Rect2( 96, 0, 32, 32 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="House4" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House4/StaticBody2D" index="0"]
+
+shape = ExtResource( 3 )
+
+[node name="Building" type="Sprite" parent="." index="5"]
+
+position = Vector2( 16, 96 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -20 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 52 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building/StaticBody2D" index="0"]
+
+shape = ExtResource( 3 )
+
+[node name="Building2" type="Sprite" parent="." index="6"]
+
+position = Vector2( 48, 96 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -20 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 32, 52 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building2/StaticBody2D" index="0"]
+
+shape = ExtResource( 3 )
+
+[node name="Building3" type="Sprite" parent="." index="7"]
+
+position = Vector2( 80, 96 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -20 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 32, 52 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building3/StaticBody2D" index="0"]
+
+shape = ExtResource( 3 )
+
+[node name="Building4" type="Sprite" parent="." index="8"]
+
+position = Vector2( 112, 96 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -20 )
+region_enabled = true
+region_rect = Rect2( 96, 0, 32, 52 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building4" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building4/StaticBody2D" index="0"]
+
+shape = ExtResource( 3 )
+
+[node name="Building5" type="Sprite" parent="." index="9"]
+
+position = Vector2( 144, 96 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -20 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 32, 52 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building5" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building5/StaticBody2D" index="0"]
+
+shape = ExtResource( 3 )
+
+[node name="Building6" type="Sprite" parent="." index="10"]
+
+position = Vector2( 176, 96 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -20 )
+region_enabled = true
+region_rect = Rect2( 160, 0, 32, 52 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building6" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building6/StaticBody2D" index="0"]
+
+shape = ExtResource( 3 )
+
+[node name="Roads" type="Sprite" parent="." index="11"]
+
+position = Vector2( 304, 64 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Grass" type="Sprite" parent="." index="12"]
+
+position = Vector2( 64, 176 )
+texture = ExtResource( 6 )
+
+

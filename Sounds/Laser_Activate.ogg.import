@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Laser_Activate.ogg-f9e6f906e66437adb0e9cb2b12ad5d38.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Laser_Activate.ogg"
+source_md5="c22da4bbc0cd2cc49b5025ee415f4190"
+
+dest_files=[ "res://.import/Laser_Activate.ogg-f9e6f906e66437adb0e9cb2b12ad5d38.oggstr" ]
+dest_md5="381f41069841fe1a0c0d1b1807512632"
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Laser/Laser.gd" type="Script" id=1]
+[ext_resource path="res://Laser/Laser.png" type="Texture" id=2]
+[ext_resource path="res://Sounds/Laser_Activate.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/Electric_Hum.ogg" type="AudioStream" id=4]
+
+[node name="Laser" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 0, -32 )
+texture = ExtResource( 2 )
+offset = Vector2( 32, 0 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 32 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="Laser_Activate" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+_sections_unfolded = [ "Pause" ]
+
+[node name="Laser_Current" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+_sections_unfolded = [ "Pause" ]
+
+
